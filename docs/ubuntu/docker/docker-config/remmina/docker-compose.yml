@@ -1,0 +1,30 @@
+version: "2.1"
+services:
+  calibre-web:
+    image: lscr.io/linuxserver/calibre-web:latest
+    container_name: calibre-web
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - DOCKER_MODS=linuxserver/mods:universal-calibre #optional
+    volumes:
+      - /root/calibre-web/config:/config
+      - /srv/dev-disk-by-uuid-7e935957-04ac-4194-8e57-8fd873794cc4/omv_share/book:/books
+    ports:
+      - 8083:8083
+    restart: unless-stopped
+  version: "2.1"
+services:
+  remmina:
+    image: lscr.io/linuxserver/remmina:latest
+    container_name: remmina
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /root/remmina/config:/config
+    ports:
+      - 3000:3000
+    restart: unless-stopped

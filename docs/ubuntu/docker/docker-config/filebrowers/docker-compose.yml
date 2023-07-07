@@ -1,0 +1,16 @@
+version: "3"
+services:
+  filebrowser:
+    image: hurlenko/filebrowser
+    container_name: filebrowser
+    ports:
+      - 8188:8080
+    volumes:
+      - /srv/dev-disk-by-uuid-963d2e19-220d-402e-9d10-c7b9874fd9fd:/data
+      - /root/filebrowser/config:/config
+    restart: always
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ="Asia/Shanghai"
+      - FB_BASEURL=/
