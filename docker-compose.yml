@@ -4,4 +4,6 @@ services:
     build: docker/docsify
     ports:
       - "8080:3000"
+    volumes:
+      - ./:/docsify
     command: bash -c "docsify serve docs"

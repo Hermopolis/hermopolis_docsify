@@ -1,3 +1,3 @@
 FROM node:18.0.0
-WORKDIR /docs
+WORKDIR /docsify
 RUN npm i docsify-cli -g
