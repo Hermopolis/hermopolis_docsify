@@ -21,6 +21,30 @@
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
     <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script></head>
-
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+<script>
+L2Dwidget.init({
+"model": {
+　　　　　　　jsonPath: "https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json",
+"scale": 1
+},
+"display": {
+"position": "right", //模型的表现位置
+"width": 150, //模型的宽度
+"height": 300, //模型的高度
+"hOffset": 0,
+"vOffset": -20
+},
+"mobile": {
+"show": true,
+"scale": 0.5
+},
+"react": {
+"opacityDefault": 0.7, //模型默认透明度
+"opacityOnHover": 0.2
+}
+});
+</script>
 </body>
 </html>
