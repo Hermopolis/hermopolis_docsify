@@ -1,46 +1,43 @@
-# 图解MySQL介绍
-
-《图解MySQL》目前还在连载更新中，大家不要催啦:joy: ，更新完会第一时间整理 PDF 的。
-
-目前已经更新好的文章：
-
-- **基础篇**:point_down:
-  
-   - [执行一条 SQL 查询语句，期间发生了什么？](/mysql/base/how_select.md)
-   - [MySQL 一行记录是怎么存储的？](/mysql/base/row_format.md)
-   
-- **索引篇** :point_down:
-  
-   - [索引常见面试题](/mysql/index/index_interview.md)
-   - [从数据页的角度看 B+ 树](/mysql/index/page.md)
-   - [为什么 MySQL 采用 B+ 树作为索引？](/mysql/index/why_index_chose_bpuls_tree.md)
-   - [MySQL 单表不要超过 2000W 行，靠谱吗？](/mysql/index/2000w.md)
-   - [索引失效有哪些？](/mysql/index/index_lose.md)
-   - [MySQL 使用 like “%x“，索引一定会失效吗？](/mysql/index/index_issue.md)
-   - [count(\*) 和 count(1) 有什么区别？哪个性能最好？](/mysql/index/count.md)
-   
-- **事务篇** :point_down:
-  - [事务隔离级别是怎么实现的？](/mysql/transaction/mvcc.md)   
-  - [MySQL 可重复读隔离级别，完全解决幻读了吗？](/mysql/transaction/phantom.md)   
-  
-- **锁篇** :point_down:
-  - [MySQL 有哪些锁？](/mysql/lock/mysql_lock.md)  
-  - [MySQL 是怎么加锁的？](/mysql/lock/how_to_lock.md)   
-  - [update 没加索引会锁全表?](/mysql/lock/update_index.md)   
-  - [MySQL 记录锁+间隙锁可以防止删除操作而导致的幻读吗？](/mysql/lock/lock_phantom.md)  
-  - [MySQL 死锁了，怎么办？](/mysql/lock/deadlock.md)   
-  - [字节面试：加了什么锁，导致死锁的？](/mysql/lock/show_lock.md)
-  
-- **日志篇** :point_down:
-  
-  - [undo log、redo log、binlog 有什么用？](/mysql/log/how_update.md)  
-  
-- **内存篇** :point_down:
-  
-  - [揭开 Buffer_Pool 的面纱](/mysql/buffer_pool/buffer_pool.md)   
-  
-  ----
-  
-  最新的图解文章都在公众号首发，别忘记关注哦！！如果你想加入百人技术交流群，扫码下方二维码回复「加群」。
-  
-  ![img](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost3@main/%E5%85%B6%E4%BB%96/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BB%8B%E7%BB%8D.png)
+- mongo
+  - [5744749__MongoDB权威指南.pdf](./docs/mongo/5744749__MongoDB权威指南.pdf)
+  - Index
+    - [正确理解和使用 Mongodb 的索引 - 掘金](./docs/mongo/Index/正确理解和使用%20Mongodb%20的索引%20-%20掘金.md)
+    - [mongodb系列02-------深入理解索引原理 - 掘金](./docs/mongo/Index/mongodb系列02-------深入理解索引原理%20-%20掘金.md)
+  - [MongoDB 分片集群架构中的分片策略 - 掘金](./docs/mongo/MongoDB%20分片集群架构中的分片策略%20-%20掘金.md)
+- mysql
+  - base
+    - [how_select](./docs/mysql/base/how_select.md)
+    - [row_format](./docs/mysql/base/row_format.md)
+  - buffer_pool
+    - [buffer_pool](./docs/mysql/buffer_pool/buffer_pool.md)
+    - [README](./docs/mysql/buffer_pool/README.md)
+  - docker
+    - [docker-compose.yaml](./docs/mysql/docker/docker-compose.yaml)
+  - index
+    - [2000w](./docs/mysql/index/2000w.md)
+    - [count](./docs/mysql/index/count.md)
+    - [index_interview](./docs/mysql/index/index_interview.md)
+    - [index_issue](./docs/mysql/index/index_issue.md)
+    - [index_lose](./docs/mysql/index/index_lose.md)
+    - [page](./docs/mysql/index/page.md)
+    - [why_index_chose_bpuls_tree](./docs/mysql/index/why_index_chose_bpuls_tree.md)
+  - lock
+    - [deadlock](./docs/mysql/lock/deadlock.md)
+    - [how_to_lock](./docs/mysql/lock/how_to_lock.md)
+    - [lock_phantom](./docs/mysql/lock/lock_phantom.md)
+    - [mysql_lock](./docs/mysql/lock/mysql_lock.md)
+    - [show_lock](./docs/mysql/lock/show_lock.md)
+    - [update_index](./docs/mysql/lock/update_index.md)
+  - log
+    - [how_update](./docs/mysql/log/how_update.md)
+    - [README](./docs/mysql/log/README.md)
+  - my-note
+    - [MySQL数据存储结构掘金](./docs/mysql/my-note/MySQL数据存储结构掘金.md)
+    - [MySQL之InnoDB存储结构 _ 京东物流技术团队 - 掘金](./docs/mysql/my-note/MySQL之InnoDB存储结构%20_%20京东物流技术团队%20-%20掘金.md)
+    - [mysql](./docs/mysql/my-note/mysql.md)
+    - [mysql-mindmap.puml](./docs/mysql/my-note/mysql-mindmap.puml)
+    - [mysql.puml](./docs/mysql/my-note/mysql.puml)
+  - [mysql-README](./docs/mysql/mysql-README.md)
+  - transaction
+    - [mvcc](./docs/mysql/transaction/mvcc.md)
+    - [phantom](./docs/mysql/transaction/phantom.md)

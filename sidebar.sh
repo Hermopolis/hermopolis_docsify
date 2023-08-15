@@ -22,7 +22,7 @@ function getdir(){
     done
 }
 
-root_dir=`ls -d VulWiki/*/`
+root_dir=`ls -d docs/*/`
 #root_dir=`ls -d */ "$1/VulWiki" | sed 's/\///g'`
 :> _sidebar.md
 for dir in $root_dir
