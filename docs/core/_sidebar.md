@@ -1,3 +1,0 @@
-- [返回首页](/)
-- [core](core/)
-  - [Linux 中断（IRQ_softirq）基础：原理及内核实现（2022）](core/Linux%20中断（IRQ_softirq）基础：原理及内核实现（2022）.md)

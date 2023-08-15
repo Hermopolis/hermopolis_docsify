@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:8.0.27
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: db
+      MYSQL_USER: lanxr
+      MYSQL_PASSWORD: 123456789
+    restart: always
+    networks:
+      - mysql-network
+
+  cli:
+    image: mysql:8.0.27
+    networks:
+      - mysql-network
+    command: mysql -hmysql -ulanxr -p123456789 db
+
+networks:
+  mysql-network:
+    driver: bridge

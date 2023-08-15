@@ -1,2 +1,0 @@
-- [返回上一级 [nginx]](ubuntu/docker/docker-config/nginx/nginx/)
-- [openmediavault-webgui.d](ubuntu/docker/docker-config/nginx/nginx/openmediavault-webgui.d/)

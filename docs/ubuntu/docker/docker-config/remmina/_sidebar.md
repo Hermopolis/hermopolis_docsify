@@ -1,2 +1,0 @@
-- [返回上一级 [docker-config]](ubuntu/docker/docker-config/)
-- [remmina](ubuntu/docker/docker-config/remmina/)

@@ -1,4 +1,0 @@
-- [返回上一级 [docker-config]](ubuntu/docker/docker-config/)
-- [clash](ubuntu/docker/docker-config/clash/)
-  - [clash](ubuntu/docker/docker-config/clash/clash/)
-    - [config](ubuntu/docker/docker-config/clash/clash/config/)

@@ -1,2 +1,0 @@
-- [返回上一级 [nginx]](ubuntu/docker/docker-config/nginx/nginx/)
-- [snippets](ubuntu/docker/docker-config/nginx/nginx/snippets/)
