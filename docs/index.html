@@ -67,6 +67,14 @@
           },
           isExpected: true,
         },
+        beian: {
+          ICP: "88",
+          NISMSP: {
+            number: "18922186630",
+            url: "https://baidu.com",
+            id: "996"
+          },
+        },
       };
     </script>
     <!-- docsify -->
@@ -116,6 +124,14 @@
      <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script></head>
     <!-- 美化提示 -->
     <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts"></script>
+    <!-- 备案 -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-beian@latest/dist/beian.min.js"></script>
 
+    <!-- pdf -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>
+    <!-- This is the source code of the pdf embed plugin -->
+    <script src="path-to-file/docsify-pdf-embed.js"></script>
+    <!-- or use this if you are not hosting the file yourself -->
+    <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
   </body>
 </html>
