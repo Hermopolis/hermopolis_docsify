@@ -32,6 +32,7 @@
     - [how_update](./docs/mysql/log/how_update.md)
     - [README](./docs/mysql/log/README.md)
   - my-note
+    - [996](./docs/mysql/my-note/996.md)
     - [MySQL数据存储结构掘金](./docs/mysql/my-note/MySQL数据存储结构掘金.md)
     - [MySQL之InnoDB存储结构 _ 京东物流技术团队 - 掘金](./docs/mysql/my-note/MySQL之InnoDB存储结构%20_%20京东物流技术团队%20-%20掘金.md)
     - [mysql](./docs/mysql/my-note/mysql.md)
