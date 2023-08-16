@@ -1,4 +1,4 @@
 # mongoDb
 ```pdf
-./MongoDB权威指南.pdf
+./mongo/MongoDB权威指南.pdf
 ```
