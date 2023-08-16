@@ -3,7 +3,7 @@
     - [正确理解和使用 Mongodb 的索引 - 掘金](./mongo/Index/正确理解和使用%20Mongodb%20的索引%20-%20掘金.md)
     - [mongodb系列02-------深入理解索引原理 - 掘金](./mongo/Index/mongodb系列02-------深入理解索引原理%20-%20掘金.md)
   - [MongoDB 分片集群架构中的分片策略 - 掘金](./mongo/MongoDB%20分片集群架构中的分片策略%20-%20掘金.md)
-  - [mongoDb权威指南](./mongo/mongoDb权威指南.md)
+  - [mongoDb权威指南](./mongo/bookMongoDb权威指南.md)
   - [MongoDB权威指南.pdf](./mongo/MongoDB权威指南.pdf)
 - mysql
   - base
