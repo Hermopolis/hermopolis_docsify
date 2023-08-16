@@ -17,7 +17,7 @@ function getdir(){
             printf '%0.s  ' $(seq 0 $counter) >> _sidebar.md
             path=`echo $dir_or_file| sed "s/[ ]/%20/g" | sed "s/[+]/%2B/g"`
             title=`echo $element | sed "s/.md//"`
-            echo "- [$title](./$path)" >> _sidebar.md
+            echo "- [$title](./${path#*/})" >> _sidebar.md
         fi
     done
 }
