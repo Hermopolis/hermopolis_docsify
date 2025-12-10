@@ -15,7 +15,7 @@ Serializer -->|2. 序列化消息| Partitioner[分区器]
 
 Partitioner -->|3. 选择分区| PartitionSelection{分区策略}
 PartitionSelection -->|指定分区| Direct[直接指定]
-PartitionSelection -->|Key哈希| Hash[Key哈希 hash（key)%分区数]
+PartitionSelection -->|Key哈希| Hash[Key哈希 计算hash key %分区数]
 PartitionSelection -->|轮询| RoundRobin[轮询]
 
 Hash -->|确定目标分区| TargetPartition[分区P0]
