@@ -152,7 +152,7 @@ Success --> Consumer
 Retry -->|重试机制| Producer
 HighThroughput -->|13. 高性能保证| Performance[高吞吐低延迟]
 
-Performance --> End（[结束])
+Performance --> End[结束]
 
 %% 样式定义
 classDef process fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
