@@ -391,3 +391,113 @@ flowchart TD
 - **流处理**：支持实时流处理场景
 
 这个流程图清晰地展示了Kafka从生产到消费的完整数据流转过程，突出了核心机制和关键设计决策。
+
+## 分区同步
+````mermaid
+flowchart TD
+%% 主分区结构
+    Partition[分区 0 - Topic: orders]
+
+%% 副本分布在不同Broker
+subgraph Brokers [副本分布在3个Broker]
+B1[Broker 1]
+B2[Broker 2]
+B3[Broker 3]
+end
+
+%% 领导者副本详情
+subgraph Leader [领导者副本]
+L1[消息日志]
+L2[LEO: 15<br>Log End Offset]
+L3[HW: 12<br>High Watermark]
+L4[LSO: 3<br>Log Start Offset]
+
+L1 --> L2
+L1 --> L3
+L1 --> L4
+end
+
+%% 跟随者副本1详情
+subgraph Follower1 [跟随者副本 1]
+F1_1[消息日志]
+F1_2[LEO: 13]
+F1_3[LSO: 3]
+
+F1_1 --> F1_2
+F1_1 --> F1_3
+end
+
+%% 跟随者副本2详情
+subgraph Follower2 [跟随者副本 2]
+F2_1[消息日志]
+F2_2[LEO: 11]
+F2_3[LSO: 3]
+
+F2_1 --> F2_2
+F2_1 --> F2_3
+end
+
+%% 副本集合
+AssignedReplicas[Assigned Replicas<br>分配的所有副本]
+ISR[In-Sync Replicas<br>同步副本集合]
+OSR[Out-of-Sync Replicas<br>非同步副本]
+
+%% 消费者部分
+Consumer1[消费者 1]
+Consumer2[消费者 2]
+OffsetStore[__consumer_offsets]
+
+%% 消息偏移量可视化
+MsgVisual[消息偏移量状态]
+Unavailable[0-2: 已清理]
+Available[3-11: 可用消息<br>已提交]
+Uncommitted[12-14: 未提交<br>消费者不可见]
+Future[15+: 未来位置]
+
+%% 连接关系
+Partition --> Brokers
+
+B1 --> Leader
+B2 --> Follower1
+B3 --> Follower2
+
+%% 副本关系
+Leader --> Follower1
+Leader --> Follower2
+
+AssignedReplicas --> Leader
+AssignedReplicas --> Follower1
+AssignedReplicas --> Follower2
+
+ISR --> Leader
+ISR --> Follower1
+
+OSR --> Follower2
+
+%% 消费者关系
+Consumer1 --> Leader
+Consumer1 -->|消费偏移量: 8| Leader
+Consumer1 -->|提交偏移量| OffsetStore
+
+%% 消息可视化连接
+L4 -->|LSO| Unavailable
+L3 -->|HW| Available
+L2 -->|LEO| Future
+
+Unavailable --> Available --> Uncommitted --> Future
+
+%% 样式
+classDef leaderStyle fill:#e1f5e1,stroke:#2e7d32
+classDef followerStyle fill:#e3f2fd,stroke:#1565c0
+classDef consumerStyle fill:#fff3e0,stroke:#ef6c00
+classDef offsetStyle fill:#fce4ec,stroke:#c2185b
+classDef isrStyle fill:#c8e6c9,stroke:#4caf50
+classDef osrStyle fill:#ffcdd2,stroke:#f44336
+
+class Leader,L2,L3,L4 leaderStyle
+class Follower1,Follower2,F1_2,F1_3,F2_2,F2_3 followerStyle
+class Consumer1,Consumer2 consumerStyle
+class OffsetStore,L2,L3,L4,F1_2,F1_3,F2_2,F2_3 offsetStyle
+class ISR isrStyle
+class OSR osrStyle
+````
